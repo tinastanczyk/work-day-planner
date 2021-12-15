@@ -8,7 +8,7 @@ THEN I am presented with timeblocks for standard business hours
 √WHEN I view the timeblocks for that day
 THEN each timeblock is color coded to indicate whether it is in the past, present, or future
 WHEN I click into a timeblock
-THEN I can enter an event
+√THEN I can enter an event
 WHEN I click the save button for that timeblock
 THEN the text for that event is saved in local storage
 WHEN I refresh the page
@@ -47,55 +47,74 @@ THEN the saved events persist -->
         <thead>
           <tr>
             <th scope="col">Time</th>
-            <th scope="col">Event</th>
-            <th scope="col">Save</th>
+            <th scope="col" class="event">Event</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <th scope="row">9</th>
-            <td></td>
-            <td></td>
+            <td class="event">
+              <div class="input-group mb-3" id="input-1">
+                <input id = "i-1" type="text" class="form-control event-input" placeholder="Event" aria-label="Event Label" aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                  <button class="btn btn-outline-secondary" type="button">Save</button>
+                </div>
+              </div>
+            </td>
           </tr>
           <tr>
             <th scope="row">10</th>
-            <td></td>
-            <td></td>
+            <td class="event">
+              <div class="input-group mb-3" id="input-1">
+                <input id = "i-1" type="text" class="form-control event-input" placeholder="Event" aria-label="Event Label" aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                  <button class="btn btn-outline-secondary" type="button">Save</button>
+                </div>
+              </div>
+            </td>
+            
           </tr>
           <tr>
             <th scope="row">11</th>
-            <td></td>
-            <td></td>
+            <td class="event">
+              <div class="input-group mb-3" id="input-1">
+                <input id = "i-1" type="text" class="form-control event-input" placeholder="Event" aria-label="Event Label" aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                  <button class="btn btn-outline-secondary" type="button">Save</button>
+                </div>
+              </div>
+            </td>
+           
           </tr>
           <tr>
             <th scope="row">12</th>
-            <td></td>
-            <td></td>
+            <td class="event"></td>
+          
           </tr>
           <tr>
             <th scope="row">1</th>
-            <td></td>
-            <td></td>
+            <td class="event"></td>
+            
           </tr>
           <tr>
             <th scope="row">2</th>
-            <td></td>
-            <td></td>
+            <td class="event"></td>
+            
           </tr>
           <tr>
             <th scope="row">3</th>
-            <td></td>
-            <td></td>
+            <td class="event"></td>
+           
           </tr>
           <tr>
             <th scope="row">4</th>
-            <td></td>
-            <td></td>
+            <td class="event"></td>
+          
           </tr>
           <tr>
             <th scope="row">5</th>
-            <td></td>
-            <td></td>
+            <td class="event"></td>
+          
           </tr>
         </tbody>
       </table>
