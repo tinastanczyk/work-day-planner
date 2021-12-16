@@ -1,6 +1,6 @@
 var saveBtn = $(".btn");
 var eventRow = $("tbody").children("tr");
-var inputEl = $("div").children(".event-input");
+// var inputEl = $("div").children(".event-input");
 
 console.log(eventRow);
 
@@ -13,11 +13,15 @@ function dateTime() {
 setInterval(dateTime, 1000);
 //
 // console.log($("#time-" + 9));
-// get each blockTime from each event
+//this function saves user input of event and the input id into local storage
 function saveEvent(event) {
   event.preventDefault();
   var saveBtn = $(event.target);
-  console.log(saveBtn.parent().parent());
+  var eventInput = saveBtn.parent().siblings("input").val();
+  var inputEl = saveBtn.parent().parent().attr("id");
+  localStorage.setItem(inputEl, eventInput);
+  console.log(saveBtn.parent().siblings("input").val());
+  console.log(saveBtn.parent().parent().attr("id"));
 }
 // this loops through each input div in each row
 for (let i = 9; i < 18; i++) {
@@ -25,6 +29,7 @@ for (let i = 9; i < 18; i++) {
   var blockTime = $("#time-" + i)
     .attr("id")
     .split("-")[1];
+    console.log(localStorage.getItem());
   // console.log(blockTime);
   // console.log($("time-").attr("time-")+blockTime);
 }
