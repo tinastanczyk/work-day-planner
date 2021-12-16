@@ -78,6 +78,7 @@ textarea {
 .event-input{
   width: 100%;
   height: 100%;
+  padding: 1rem;
 }
 
 .table td{
@@ -88,6 +89,3 @@ textarea {
   margin-bottom: 0rem!important;
 }
 
-#i-1{
-  padding: 1rem;
-}
