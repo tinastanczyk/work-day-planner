@@ -29,7 +29,7 @@ for (let i = 9; i < 18; i++) {
   var blockTime = $("#time-" + i)
     .attr("id")
     .split("-")[1];
-    console.log(localStorage.getItem());
+    // console.log(localStorage.getItem());
   // console.log(blockTime);
   // console.log($("time-").attr("time-")+blockTime);
 }
@@ -39,7 +39,9 @@ saveBtn.on("click", saveEvent);
 
 function checkEvent() {
   // setting timeNow to be equal to the hour in 24hr format
-  var timeNow = moment().format("H");
+  var timeNow = moment().format("HH");
+  // gets the absolute value of the hour from moment()
+  timeNow = Math.abs(timeNow);
   // var timeNow =0;
   console.log(timeNow);
   eventRow.each(function () {
@@ -47,7 +49,7 @@ function checkEvent() {
     var bl = $(this);
     // this targets the number id (9-17), which is respective to the time (9-5) for each row
     var eventTime = bl.children("td").children().attr("id").split("-")[1];
-    console.log(bl.children("td").children().attr("id").split("-")[1]);
+    // console.log(bl.children("td").children().attr("id").split("-")[1]);
     // if the current time equals the event row time then add the class "present", which turns the row, header and input red
     if (timeNow == eventTime) {
       bl.find("tr").addClass("present");
@@ -62,6 +64,7 @@ function checkEvent() {
     }
     // if the current time is less than the event row time then add the class "future", which turns the row, header and input green
     if (timeNow < eventTime) {
+      console.log(eventTime);
       bl.find("tr").addClass("future");
       bl.find("th").addClass("future");
       bl.find(".event-input").addClass("future");
