@@ -38,28 +38,20 @@ function checkEvent() {
     var bl = $(this);
     // this targets the number id (9-17), which is respective to the time (9-5) for each row
     var eventTime = bl.children("td").children().attr("id").split("-")[1];
-    // console.log(bl.children("td").children().attr("id").split("-")[1]);
-    // if the current time equals the event row time then add the class "present", which turns the row, header, save button and input red
+    // if the current time equals the event row time then add the class "present", which turns the row and input red
     if (timeNow == eventTime) {
       bl.find("tr").addClass("present");
-      bl.find("th").addClass("present");
       bl.find(".event-input").addClass("present");
-      bl.find(".input-group-append").addClass("present");
     }
-    // if the current time is greater than the event row time then add the class "past", which turns the row, header, save button and input gray
+    // if the current time is greater than the event row time then add the class "past", which turns the row and input gray
     if (timeNow > eventTime) {
       bl.find("tr").addClass("past");
-      bl.find("th").addClass("past");
       bl.find(".event-input").addClass("past");
-      bl.find(".input-group-append").addClass("past");
     }
-    // if the current time is less than the event row time then add the class "future", which turns the row, header, save button and input green
+    // if the current time is less than the event row time then add the class "future", which turns the row and input green
     if (timeNow < eventTime) {
-      // console.log(eventTime);
       bl.find("tr").addClass("future");
-      bl.find("th").addClass("future");
       bl.find(".event-input").addClass("future");
-      bl.find(".input-group-append").addClass("future");
     }
   });
 }

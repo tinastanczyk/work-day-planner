@@ -12,6 +12,10 @@ textarea {
   border-left: 1px solid black;
   padding: 10px;
 }
+th{
+  text-align: end;
+  font-weight: 30px;
+}
 
 .jumbotron {
   text-align: center;
@@ -89,3 +93,6 @@ textarea {
   margin-bottom: 0rem!important;
 }
 
+#event-heading{
+  text-align: center;
+}
